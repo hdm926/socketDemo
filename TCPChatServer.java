@@ -22,6 +22,7 @@ public class TCPChatServer {
 
             //4.使用管道流输出
             byteArrayOutputStream = new ByteArrayOutputStream();
+            //实际开发中最好不要这样，会造成内存资源的浪费
             byte[] buf = new byte[1024];
             int len;
             while(inputStream.read(buf)!=-1){
